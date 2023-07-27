@@ -1,0 +1,1 @@
+export const multiLineEditFieldColor = '#F2F2F2'

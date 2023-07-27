@@ -1,0 +1,13 @@
+{
+  "name": "Class Diagram",
+  "id": "1223307422838321651",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figjam"
+  ],
+  "containsWidget": true,
+  "widgetApi": "1.0.0"
+}
