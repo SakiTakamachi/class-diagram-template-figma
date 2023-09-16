@@ -8,7 +8,9 @@ export const classNameBlock = (
     color: string,
     type: string,
     className: string,
-    setClassName: (newValue: string | ((currValue: string) => string)) => void
+    setClassName: (newValue: string | ((currValue: string) => string)) => void,
+    classDescription: string,
+    setClassDescription: (newValue: string | ((currValue: string) => string)) => void
 ) => {
     return (
         <AutoLayout
@@ -74,6 +76,44 @@ export const classNameBlock = (
                     italic={isAbstractClass(type)}
                 />
             </AutoLayout>
+
+            {/** Description */}
+            <AutoLayout
+                verticalAlignItems={'center'}
+                horizontalAlignItems={'center'}
+                width={'fill-parent'}
+                padding={{
+                    top: 10,
+                    bottom: 0,
+                    left: 10,
+                    right: 10,
+                }}
+            >
+                <Input
+                    value={classDescription}
+                    placeholder='Description'
+                    onTextEditEnd={(e) => {
+                        setClassDescription(e.characters);
+                    }}
+                    fontSize={16}
+                    width={'fill-parent'}
+                    fill='#fff'
+                    inputFrameProps={{
+                        padding: {
+                            vertical: 0,
+                            horizontal: 10,
+                        },
+                        cornerRadius: {
+                            topLeft: 8,
+                            topRight: 8,
+                            bottomLeft: 0,
+                            bottomRight: 0,
+                        }
+                    }}
+                    inputBehavior='wrap'
+                />
+            </AutoLayout>
+            {/** Description End */}
 
             {/** Abstract Class Label */}
             <AutoLayout
