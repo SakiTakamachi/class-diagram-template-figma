@@ -15,6 +15,7 @@ import { methodBlock } from 'classDiagram/Parts/MethodBlock'
 function ClassDiagram() {
     const [color, setColor] = useSyncedState('theme', '#555555')
     const [className, setClassName] = useSyncedState('className', '')
+    const [classDescription, setClassDescription] = useSyncedState('classDescription', '')
 
     const [size, setSize] = useSyncedState('size', `${SizeType.M}`)
     const [type, setType] = useSyncedState('type', `${TypeType.CLASS}`)
@@ -60,7 +61,7 @@ function ClassDiagram() {
             width={getSizeValue(size)}
         >
 
-            {classNameBlock(color, type, className, setClassName)}
+            {classNameBlock(color, type, className, setClassName, classDescription, setClassDescription)}
 
             {propertyBlock(
                 color,
