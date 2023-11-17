@@ -2,7 +2,7 @@ const { widget } = figma
 const { AutoLayout, Input, Text, SVG } = widget
 
 import { fileIconSvgSrc } from 'classDiagram/Settings/Icon'
-import { isInterface, isAbstractClass } from 'classDiagram/Utils/ClassType'
+import { isInterface, isEnumeration, isAbstractClass } from 'classDiagram/Utils/ClassType'
 
 export const classNameBlock = (
     color: string,
@@ -39,6 +39,24 @@ export const classNameBlock = (
                 </Text>
             </AutoLayout>
             {/** Interface Label End */}
+
+            {/** Enumeration Label */}
+            <AutoLayout
+                verticalAlignItems={'start'}
+                horizontalAlignItems={'start'}
+                width={'fill-parent'}
+                height={34}
+                hidden={! isEnumeration(type)}
+            >
+                <Text
+                    fontSize={20}
+                    fill={'#fff'}
+                    width={'hug-contents'}
+                >
+                    &lt;&lt; enumeration &gt;&gt;
+                </Text>
+            </AutoLayout>
+            {/** Enumeration Label End */}
 
             <AutoLayout
                 verticalAlignItems={'center'}

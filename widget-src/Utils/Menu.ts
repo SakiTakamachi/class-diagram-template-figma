@@ -43,6 +43,7 @@ export const getMenu = (color:string, type: string, size: string): WidgetPropert
             {option: `${TypeType.CLASS}`, label: "Class"},
             {option: `${TypeType.ABSTRACT_CLASS}`, label: "Abstract Class"},
             {option: `${TypeType.INTERFACE}`, label: "Interface"},
+            {option: `${TypeType.ENUMERATION}`, label: "Enumeration"},
             ],
         },
         {
