@@ -21,6 +21,7 @@ export const AccessSymbolType = {
 export const TypeType = {
     CLASS: 'class',
     INTERFACE: 'interface',
+    ENUMERATION: 'enumeration',
     ABSTRACT_CLASS: 'abstract class',
 } as const;
 
